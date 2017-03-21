@@ -1,11 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:EstudoListView"
+             xmlns:local="clr-namespace:EstudoListView"             
+             BackgroundColor="Blue"
              x:Class="EstudoListView.MainPage">
-
-	<Label Text="Welcome to Xamarin Forms!" 
-           VerticalOptions="Center" 
-           HorizontalOptions="Center" />
-
+    <StackLayout Padding="20">
+        <ListView BackgroundColor="SpringGreen" ItemsSource="{Binding Contacts}" SeparatorColor="Red" IsPullToRefreshEnabled="false" IsRefreshing="{Binding IsBusy}"
+                  RefreshCommand="{Binding RefreshListView}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ImageCell Text="{Binding Name}" Detail="{Binding Email}"/>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
 </ContentPage>

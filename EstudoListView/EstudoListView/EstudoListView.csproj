@@ -38,6 +38,11 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Model\Entities\BaseObservableObject.cs" />
+    <Compile Include="Model\Entities\Contact.cs" />
+    <Compile Include="Model\Entities\ContactsDirectory.cs" />
+    <Compile Include="Model\Services\ContactServices.cs" />
+    <Compile Include="ViewModel\MainPageViewModel.cs" />
     <Compile Include="View\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
@@ -54,10 +59,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Model\Entities\" />
-    <Folder Include="Model\Services\" />
     <Folder Include="Repository\" />
-    <Folder Include="ViewModel\" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
